@@ -4,22 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Model
 {
     
        
         public class Cat
         {
-           public  CatColor catcolor = new CatColor();
-            private string _name;
-            public readonly string Age;
-         
+            private string _name=null;
+            public string Age { get; }
+            public CatColor Color { get ; set; } = new CatColor();
             private int _health = 5;
-
             public Cat(string age)
             {
                 Age = age;
             }
+        
+        
+        
             public string Name
             {
                 get
@@ -42,15 +44,17 @@ namespace Model
                 {
                     if (_health >= 5)
                     {
-                        return catcolor.HealthyColor;
+                        return Color.HealthyColor;
                     }
                     else
                     {
-                        return catcolor.SickColor;
+                        return Color.SickColor;
                     }
                 }
             }
-            public CatColor Color { get ; set; }
+
+            
+            
             public void Feed()
             {
                 _health++;

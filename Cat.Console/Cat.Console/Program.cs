@@ -14,8 +14,6 @@ namespace View
             Console.WriteLine("\tCat for programmer");
             Console.WriteLine("Enter the Cat age");
             var cat = new Cat(Console.ReadLine());
-            Console.WriteLine("Enter the cat`s name");
-            cat.Name = Console.ReadLine();
             var catColor = new CatColor();
             string menu = "";
             do
@@ -30,9 +28,9 @@ namespace View
                     case "a":
                     {
                         Console.WriteLine("Sick color:");
-                        cat.catcolor.SickColor = Console.ReadLine();
+                        cat.Color.SickColor = Console.ReadLine();
                         Console.WriteLine("Healthy color:");
-                        cat.catcolor.HealthyColor = Console.ReadLine();
+                        cat.Color.HealthyColor = Console.ReadLine();
                         break;
                     }
                     case "b":
